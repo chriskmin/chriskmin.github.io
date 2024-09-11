@@ -1,137 +1,84 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    background-color: #333;
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header nav ul {
-    list-style: none;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffd700;
-}
-
-section {
-    flex-grow: 1;
-    padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-ul {
-    list-style: square inside;
-    margin: 20px 0;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-footer {
+    background-color: #f4f4f4;
+  }
+  
+  header {
     background-color: #333;
-    color: white;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    padding: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 10;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 20px;
+    min-height: 80vh;
+  }
+  
+  section {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .content-spacing {
+    height: 100px; /* Extra space before the footer */
+  }
+  
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Specific Styles for Assignment Cards */
-.assignment-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 300px;
+    height: auto;
+    border-radius: 90%; /* Optional for a circular image */
+  }
+  
+  .assignment-box {
+    width: 110%; /* Makes the box 80% of the container width */
+    max-width: 1000px; /* Ensures the box doesn't get too wide on large screens */
+    margin: 20px auto; /* Centers the box horizontally */
     padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.assignment-card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.assignment-card p {
-    margin-bottom: 10px;
-}
-
-.assignment-card a {
-    color: #28a745;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.assignment-card a:hover {
-    color: #218838;
-}
-
-@media screen and (max-width: 768px) {
-    header nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    .assignment-card {
-        padding: 15px;
-    }
-}
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounds the corners slightly */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #f9f9f9; /* Light background color */
+  }
