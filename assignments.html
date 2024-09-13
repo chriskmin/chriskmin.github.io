@@ -6,18 +6,18 @@
     <title>Assignments</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Add styles to create two-column layout */
+       
         .assignment-container {
             display: flex;
             justify-content: space-between;
         }
 
         .assignment-list {
-            width: 60%; /* Adjust the width of the assignments section */
+            width: 60%; 
         }
 
         .assignment-form {
-            width: 35%; /* Adjust the width of the form section */
+            width: 35%; 
             border: 1px solid #ccc;
             padding: 20px;
             border-radius: 8px;
@@ -65,7 +65,6 @@
     </header>
     <main>
         <section class="assignment-container">
-            <!-- Left side: Course Assignments -->
             <section class="assignment-list">
                 <h2>Course Assignments</h2>
 
@@ -78,13 +77,9 @@
                     <h3>Assignment 1: Data Collection and Analysis</h3>
                     <p>Brief explanation</p>
                 </article>
-
-                <!-- Container for dynamically added assignments -->
                 <section id="assignment-list">
                 </section>
             </section>
-
-            <!-- Right side: Form to add new assignments -->
             <section class="assignment-form">
                 <h3>Add New Assignment</h3>
                 <label for="assignmentName">Assignment Name:</label>
@@ -106,26 +101,19 @@
 
     <script>
         function addAssignment() {
-            // Get the input values
             const assignmentName = document.getElementById('assignmentName').value;
             const githubLink = document.getElementById('githubLink').value;
             const description = document.getElementById('description').value;
 
-            // Create a new article element
             const newAssignment = document.createElement('article');
             newAssignment.classList.add('assignment-box');
-
-            // Create the new content for the assignment
             newAssignment.innerHTML = `
                 <h3>${assignmentName}</h3>
                 <p>${description}</p>
                 <p><a href="${githubLink}" target="_blank">${githubLink}</a></p>
             `;
-
-            // Append the new assignment to the assignment list section
             document.getElementById('assignment-list').appendChild(newAssignment);
 
-            // Clear input fields after adding
             document.getElementById('assignmentName').value = '';
             document.getElementById('githubLink').value = '';
             document.getElementById('description').value = '';
