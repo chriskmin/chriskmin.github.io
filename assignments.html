@@ -15,32 +15,68 @@
                 <li><a href="work-experience.html">Work Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="assignments.html">Assignments</a></li> <!-- Link to the new assignments page -->
+                <li><a href="assignments.html">Assignments</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
             <h2>Course Assignments</h2>
-            <article class = "assignment-box">
-              <h3>Assignment 0: Dummy Assignment</h3>
-              <p> 
 
-              </p>
-          </article>
-            <article class = "assignment-box">
-                <h3>Assignment 1: Data Collection and Analysis</h3>
-                <p>Brief explanation </p>
-                <p> 
-                    
-                </p>>
+            <article class="assignment-box">
+                <h3>Assignment 0: Dummy Assignment</h3>
+                <p> </p>
             </article>
-            
-            <!-- Add more assignments similarly -->
+
+            <article class="assignment-box">
+                <h3>Assignment 1: Data Collection and Analysis</h3>
+                <p>Brief explanation</p>
+            </article>
+
+            <!-- Container for dynamically added assignments -->
+            <section id="assignment-list">
+            </section>
+
+            <!-- Form to add new assignments -->
+            <div>
+                <h3>Add New Assignment</h3>
+                <label for="assignmentName">Assignment Name:</label>
+                <input type="text" id="assignmentName" placeholder="Enter assignment name"><br><br>
+
+                <label for="githubLink">GitHub Link:</label>
+                <input type="text" id="githubLink" placeholder="Enter GitHub link"><br><br>
+
+                <button onclick="addAssignment()">Add Assignment</button>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Chris Min. All rights reserved.</p>
     </footer>
+
+    <script>
+        function addAssignment() {
+            // Get the input values
+            const assignmentName = document.getElementById('assignmentName').value;
+            const githubLink = document.getElementById('githubLink').value;
+
+            // Create a new article element
+            const newAssignment = document.createElement('article');
+            newAssignment.classList.add('assignment-box');
+
+            // Create the new content for the assignment
+            newAssignment.innerHTML = `
+                <h3>${assignmentName}</h3>
+                <p><a href="${githubLink}" target="_blank">${githubLink}</a></p>
+            `;
+
+            // Append the new assignment to the assignment list section
+            document.getElementById('assignment-list').appendChild(newAssignment);
+
+            // Clear input fields after adding
+            document.getElementById('assignmentName').value = '';
+            document.getElementById('githubLink').value = '';
+        }
+    </script>
 </body>
 </html>
