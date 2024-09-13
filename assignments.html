@@ -5,50 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-       
-        .assignment-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .assignment-list {
-            width: 60%; 
-        }
-
-        .assignment-form {
-            width: 35%; 
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-
-        .assignment-box {
-            margin-bottom: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -64,41 +20,38 @@
         </nav>
     </header>
     <main>
-        <section class="assignment-container">
-            <section class="assignment-list">
-                <h2>Course Assignments</h2>
+        <section>
+            <h2>Course Assignments</h2>
 
-                <article class="assignment-box">
-                    <h3>Assignment 0: Dummy Assignment</h3>
-                    <p> </p>
-                </article>
+            <article class="assignment-box">
+                <h3>Assignment 0: Dummy Assignment</h3>
+                <p> </p>
+            </article>
 
-                <article class="assignment-box">
-                    <h3>Assignment 1: Data Collection and Analysis</h3>
-                    <p>Brief explanation</p>
-                </article>
-                <section id="assignment-list">
-                </section>
+            <article class="assignment-box">
+                <h3>Assignment 1: Data Collection and Analysis</h3>
+                <p>Brief explanation</p>
+            </article>
+
+            <!-- Container for dynamically added assignments -->
+            <section id="assignment-list">
             </section>
-            <section class="assignment-form">
+
+            <!-- Form to add new assignments -->
+            <div>
                 <h3>Add New Assignment</h3>
                 <label for="assignmentName">Assignment Name:</label>
-                <input type="text" id="assignmentName" placeholder="Enter assignment name"><br>
+                <input type="text" id="assignmentName" placeholder="Enter assignment name"><br><br>
 
                 <label for="githubLink">GitHub Link:</label>
-                <input type="text" id="githubLink" placeholder="Enter GitHub link"><br>
-
-                <label for="description">Description:</label>
-                <textarea id="description" rows="4" placeholder="Enter a brief description"></textarea><br>
+                <input type="text" id="githubLink" placeholder="Enter GitHub link"><br><br>
 
                 <button onclick="addAssignment()">Add Assignment</button>
-            </section>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Chris Min. All rights reserved.</p>
     </footer>
-
-
 </body>
 </html>
